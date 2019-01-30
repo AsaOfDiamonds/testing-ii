@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Display from "./Display";
 
 class Dashboard extends Component {
   state = {
@@ -54,21 +55,25 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <h2>Dashboard</h2>
-          <div className='strike'>
-            <h1>{this.state.strike} Strikes</h1>
-            <button onClick={this.strike}>+ Strike</button>
+        <Display
+         strike={this.state.strike}
+         ball={this.state.ball}
+         foul={this.state.foul}
+         />
+        <div className='dashboard'>          
+            <div className='strike'>            
+              <button className='btn' onClick={this.strike}>+ Strike</button>
+            </div>
+          <div className='ball'>         
+            <button className='btn' onClick={this.ball}>+ Ball</button>
           </div>
-        <div className='ball'>
-          <h1>{this.state.ball} Balls</h1>
-          <button onClick={this.ball}>+ Ball</button>
-        </div>
-        <div className='foul'>
-          <h1>{this.state.foul} Fouls</h1>
-          <button onClick={this.foul}>+ Foul</button>
-        </div>
-        <div className='hit'>          
-          <button onClick={this.hit}>Hit</button>
+          <div className='foul'>
+            
+            <button className='btn' onClick={this.foul}>+ Foul</button>
+          </div>
+          <div className='hit'>          
+            <button className='btn' onClick={this.hit}>Hit</button>
+          </div>
         </div>
       </div>
     )
