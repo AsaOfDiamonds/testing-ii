@@ -62,17 +62,16 @@ class Dashboard extends Component {
          />
         <div className='dashboard'>          
             <div className='strike'>            
-              <button className='btn' onClick={this.strike}>+ Strike</button>
+              <button data-testid='strike-btn' className='btn' onClick={this.strike}>+ Strike</button>
             </div>
           <div className='ball'>         
-            <button className='btn' onClick={this.ball}>+ Ball</button>
+            <button data-testid='ball-btn' className='btn' onClick={this.ball}>+ Ball</button>
           </div>
-          <div className='foul'>
-            
-            <button className='btn' onClick={this.foul}>+ Foul</button>
+          <div className='foul'>            
+            <button data-testid='foul-btn' className='btn' onClick={this.foul}>+ Foul</button>
           </div>
           <div className='hit'>          
-            <button className='btn' onClick={this.hit}>Hit</button>
+            <button data-testid='hit-btn' className='btn' onClick={this.hit}>Hit</button>
           </div>
         </div>
       </div>
