@@ -9,15 +9,32 @@ class Dashboard extends Component {
   }
 
   strike = () => {
-    this.setState({
-      strike: this.state.strike + 1
-    })
+    if(this.state.strike <= 1) {
+      this.setState({
+        strike: this.state.strike + 1
+      })
+    } else {
+      this.setState({
+        strike: 0,
+        ball: 0,
+        foul: 0
+      })
+    }    
   }
 
   ball = () => {
-    this.setState({
-      ball: this.state.ball + 1
-    })
+    if(this.state.ball <= 2) {
+      this.setState({
+        ball: this.state.ball + 1
+      })
+    } else {
+      this.setState({
+        strike: 0,
+        ball: 0,
+        foul: 0
+      })
+    }
+    
   }
 
   foul = () => {
