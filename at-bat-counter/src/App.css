@@ -49,3 +49,11 @@
     background: #306563;
     border-color: #f2f3ed;
   }
+
+  .strike {
+    margin-top: .5rem;
+  }
+
+  .hit {
+    margin-bottom: .5rem;
+  }
