@@ -4,7 +4,8 @@ class Dashboard extends Component {
   state = {
     strike: 0,
     ball: 0,
-    foul: 0
+    foul: 0,
+    hit: 0
   }
 
   strike = () => {
@@ -25,6 +26,15 @@ class Dashboard extends Component {
     })
   }
 
+  hit = () => {
+    this.setState({
+      hit: this.state.hit + 1,
+      strike: 0,
+      ball: 0,
+      foul: 0
+    })
+  }
+
   render() {
     return (
       <div>
@@ -40,6 +50,10 @@ class Dashboard extends Component {
         <div className='foul'>
           <h1>{this.state.foul} Fouls</h1>
           <button onClick={this.foul}>+ foul</button>
+        </div>
+        <div className='hit'>
+          <h1>{this.state.hit} Hits</h1>
+          <button onClick={this.hit}>+ Hits</button>
         </div>
       </div>
     )
