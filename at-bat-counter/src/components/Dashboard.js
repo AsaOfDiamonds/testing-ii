@@ -44,8 +44,7 @@ class Dashboard extends Component {
   }
 
   hit = () => {
-    this.setState({
-      hit: this.state.hit + 1,
+    this.setState({     
       strike: 0,
       ball: 0,
       foul: 0
@@ -66,11 +65,10 @@ class Dashboard extends Component {
         </div>
         <div className='foul'>
           <h1>{this.state.foul} Fouls</h1>
-          <button onClick={this.foul}>+ foul</button>
+          <button onClick={this.foul}>+ Foul</button>
         </div>
-        <div className='hit'>
-          <h1>{this.state.hit} Hits</h1>
-          <button onClick={this.hit}>+ Hits</button>
+        <div className='hit'>          
+          <button onClick={this.hit}>Hit</button>
         </div>
       </div>
     )
